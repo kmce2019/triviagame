@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const app = express();
 const PORT = 3080;
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/question', async (req, res) => {
   try {
