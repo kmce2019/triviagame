@@ -1,0 +1,13 @@
+{
+  "name": "trivia-game",
+  "version": "1.0.0",
+  "description": "Live Trivia Game",
+  "main": "trivia_game_server.js",
+  "scripts": {
+    "start": "node trivia_game_server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.11"
+  }
+}

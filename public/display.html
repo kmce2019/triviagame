@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trivia Display</title>
+  <meta charset="UTF-8" />
+</head>
+<body>
+  <h1>Trivia Question</h1>
+  <div id="question">Loading...</div>
+
+  <script>
+    fetch('/api/question')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('question').innerText = data.question;
+      })
+      .catch(() => {
+        document.getElementById('question').innerText = 'Failed to load question.';
+      });
+  </script>
+</body>
+</html>

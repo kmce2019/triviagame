@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  trivia:
+    build: .
+    ports:
+      - "3080:3080"
+    volumes:
+      - .:/app
+    restart: unless-stopped
