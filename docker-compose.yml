@@ -7,4 +7,8 @@ services:
       - "3080:3080"
     volumes:
       - .:/app
+    working_dir: /app
+    environment:
+      - NODE_ENV=development
     restart: unless-stopped
+    command: sh -c "npx prisma migrate deploy && node trivia_game_server.js"
